@@ -75,14 +75,14 @@ export default class QQBrowserScreen extends Component {
 |rectWidth|number|200|||
 |isCornerOffset|bool|false|||
 |cornerOffsetSize|number|0|||
-|bottomMenuHeight|number|100|||
+|bottomMenuHeight|number|0|||
 |scanBarAnimateTime|number|2500|||
 |scanBarColor|string|#22ff00|||
 |scanBarImage|any|null|||
 |scanBarHeight|number|1.5|||
 |scanBarMargin|number|6|||
 |hintText|string|将二维码/条码放入框内，</br>即可自动扫描|-|-|
-|hintTextStyle|object|{color: '#fff', fontSize: 14}|-|-|
+|hintTextStyle|object|{ color: '#fff', </br>fontSize: 14,</br>backgroundColor:'transparent'}|-|-|
 |hintTextPosition|number|130|-|-|
 |renderTopBarView|func|-|-|-|
 |renderBottomMenuView|func|-|-|-|
@@ -90,11 +90,12 @@ export default class QQBrowserScreen extends Component {
 |bottomMenuStyle|object|-|-|-|
 
 
-## 6.To Do
+## 7.To Do
 
 - [ ] 生成二维码功能
 - [ ] 解决重复扫码的问题
 - [ ] 优化属性设置方式
+- [ ] 控制手电筒
 
 ## 8.Thanks
 

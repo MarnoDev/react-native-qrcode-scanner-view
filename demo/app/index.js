@@ -14,6 +14,7 @@ import OFOScreen from './screens/ofo/OFOScreen';
 import TwitterScreen from './screens/twitter/TwitterScreen';
 import QQBrowserScreen from "./screens/qqbrowser/QQBrowserScreen";
 import WeChatScreen from "./screens/wechat/WeChatScreen";
+import DefaultScreen from "./screens/default/DefaultScreen";
 
 class HomeScreen extends Component {
     constructor(props) {
@@ -56,21 +57,27 @@ class HomeScreen extends Component {
                     </View>
                 </TouchableWithoutFeedback>
 
-
-                <TouchableWithoutFeedback onPress={this._navigateToOFO.bind(this)}>
-                   <View>
-                       <Text
-                           style={[styles.text_item, {backgroundColor: Colors.yellow_ffc962}]}
-                       >OFO</Text>
-                   </View>
-                </TouchableWithoutFeedback>
-
-
                 <TouchableWithoutFeedback onPress={this._navigateToQQBrowser.bind(this)}>
                     <View>
                         <Text
-                            style={[styles.text_item, {backgroundColor: Colors.blue_00B0FF}]}
+                            style={[styles.text_item, {backgroundColor: Colors.blue_009688}]}
                         >QQBrowser</Text>
+                    </View>
+                </TouchableWithoutFeedback>
+
+                <TouchableWithoutFeedback onPress={this._navigateToOFO.bind(this)}>
+                    <View>
+                        <Text
+                            style={[styles.text_item, {backgroundColor: Colors.yellow_ffc962}]}
+                        >OFO</Text>
+                    </View>
+                </TouchableWithoutFeedback>
+
+                <TouchableWithoutFeedback onPress={this._navigatorToDefault.bind(this)}>
+                    <View>
+                        <Text
+                            style={[styles.text_item, {backgroundColor: Colors.blue_00B0FF}]}
+                        >Default</Text>
                     </View>
                 </TouchableWithoutFeedback>
 
@@ -108,6 +115,10 @@ class HomeScreen extends Component {
     _navigateToQQBrowser() {
         this._navigateToScreen('QQBrowser')
     }
+    _navigatorToDefault(){
+        this._navigateToScreen('Default1')
+    }
+
 
 }
 
@@ -151,6 +162,7 @@ const App = StackNavigator(
         Twitter: {screen: TwitterScreen},
         OFO: {screen: OFOScreen},
         QQBrowser: {screen: QQBrowserScreen},
+        Default1:{screen:DefaultScreen},
     },
     {
         headerMode: 'none',
