@@ -31,71 +31,76 @@ react-native link
 ```
 import { QRScannerView } from 'ac-qrcode';
 
-export default class QQBrowserScreen extends Component {
+export default class DefaultScreen extends Component {
     render() {
         return (
+
             < QRScannerView
                 onScanResultReceived={this.barcodeReceived.bind(this)}
 
-                renderTopBarView={() => {
-                    return (
-                        <View>
-                          <Text}>这顶部标题栏</Text>
-                        </View>
-                    )
-                }}
+                renderTopBarView={() => this._renderTitleBar()}
 
-                renderBottomMenuView={() => {
-                    return (
-                        <View>
-                            <Text>相册</Text>
-                        </View>
-                    )
-                }}
+                renderBottomMenuView={() => this._renderMenu()}
             />
         )
     }
 
+    _renderTitleBar(){
+        return(
+            <Text
+                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
+            >Here is title bar</Text>
+        );
+    }
+
+    _renderMenu() {
+        return (
+            <Text
+                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
+            >Here is bottom menu</Text>
+        )
+    }
+
     barcodeReceived(e) {
-        console.log(e)
+        Toast.show('Type: ' + e.type + '\nData: ' + e.data);
+        //console.log(e)
     }
 }
 ```
 ## 6.Props
 
-|Prop|Type|Default|Optional|Description|
-|:--:|:--:|:--:|:--:|:--:|
-|maskColor|string|#0000004D|-|-|
-|borderColor|string|#000000|-|-|
-|cornerColor|string|#000000|-|-|
-|borderWidth|number|0|-|-|
-|cornerBorderWidth|number|4|-|-|
-|cornerBorderLength|number|20|-|-|
-|rectHeight|number|200|||
-|rectWidth|number|200|||
-|isCornerOffset|bool|false|||
-|cornerOffsetSize|number|0|||
-|bottomMenuHeight|number|0|||
-|scanBarAnimateTime|number|2500|||
-|scanBarColor|string|#22ff00|||
-|scanBarImage|any|null|||
-|scanBarHeight|number|1.5|||
-|scanBarMargin|number|6|||
-|hintText|string|将二维码/条码放入框内，</br>即可自动扫描|-|-|
-|hintTextStyle|object|{ color: '#fff', </br>fontSize: 14,</br>backgroundColor:'transparent'}|-|-|
-|hintTextPosition|number|130|-|-|
-|renderTopBarView|func|-|-|-|
-|renderBottomMenuView|func|-|-|-|
-|isShowScanBar|bool|true|-|-|
-|bottomMenuStyle|object|-|-|-|
+|Prop|Type|Default|Optional|
+|:--:|:--:|:--:|:--:|
+|maskColor|string|#0000004D|true|
+|borderColor|string|#000000|true|
+|cornerColor|string|#000000|true|
+|borderWidth|number|0|true|
+|cornerBorderWidth|number|4|true|
+|cornerBorderLength|number|20|true|
+|rectHeight|number|200|true|
+|rectWidth|number|200|true|
+|isCornerOffset|bool|false|true|
+|cornerOffsetSize|number|0|true|
+|bottomMenuHeight|number|0|true|
+|scanBarAnimateTime|number|2500|true|
+|scanBarColor|string|#22ff00|true|
+|scanBarImage|any|null|true|
+|scanBarHeight|number|1.5|true|
+|scanBarMargin|number|6|true|
+|hintText|string|将二维码/条码放入框内，</br>即可自动扫描|true|
+|hintTextStyle|object|{ color: '#fff', </br>fontSize: 14,</br>backgroundColor:'transparent'}|true|
+|hintTextPosition|number|130|true|
+|isShowScanBar|bool|true|true|
+|bottomMenuStyle|object|-|true|
+|renderTopBarView|func|-|flase|
+|renderBottomMenuView|func|-|false|
+|onScanResultReceived|func|-|false|
 
 
 ## 7.To Do
 
-- [ ] 生成二维码功能
-- [ ] 解决重复扫码的问题
-- [ ] 优化属性设置方式
-- [ ] 控制手电筒
+- [ ] Generate qr code
+- [ ] Control flashlight
 
 ## 8.Thanks
 

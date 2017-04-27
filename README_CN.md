@@ -26,6 +26,8 @@ npm install ac-qrcode --save
 
 //第二步（react-native-camera 需要 link 后才能使用）
 react-native link
+
+PS：如果 link 没有成功，会报错。如果没有自动 link，可以手动 link
 ```
 
 ## 5.基本使用
@@ -33,71 +35,76 @@ react-native link
 ```
 import { QRScannerView } from 'ac-qrcode';
 
-export default class QQBrowserScreen extends Component {
+export default class DefaultScreen extends Component {
     render() {
         return (
+
             < QRScannerView
                 onScanResultReceived={this.barcodeReceived.bind(this)}
 
-                renderTopBarView={() => {
-                    return (
-                        <View>
-                          <Text}>这顶部标题栏</Text>
-                        </View>
-                    )
-                }}
+                renderTopBarView={() => this._renderTitleBar()}
 
-                renderBottomMenuView={() => {
-                    return (
-                        <View>
-                            <Text>相册</Text>
-                        </View>
-                    )
-                }}
+                renderBottomMenuView={() => this._renderMenu()}
             />
         )
     }
 
+    _renderTitleBar(){
+        return(
+            <Text
+                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
+            >这里添加标题</Text>
+        );
+    }
+
+    _renderMenu() {
+        return (
+            <Text
+                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
+            >这里添加底部菜单</Text>
+        )
+    }
+
     barcodeReceived(e) {
-        console.log(e)
+        Toast.show('Type: ' + e.type + '\nData: ' + e.data);
+        //console.log(e)
     }
 }
 ```
 
 ## 6.属性列表
 
-|Prop|Type|Default|Optional|Description|
+|Prop|类型|默认值|可选|描述|
 |:--:|:--:|:--:|:--:|:--:|
-|maskColor|string|#0000004D|-|-|
-|borderColor|string|#000000|-|-|
-|cornerColor|string|#000000|-|-|
-|borderWidth|number|0|-|-|
-|cornerBorderWidth|number|4|-|-|
-|cornerBorderLength|number|20|-|-|
-|rectHeight|number|200|||
-|rectWidth|number|200|||
-|isCornerOffset|bool|false|||
-|cornerOffsetSize|number|0|||
-|bottomMenuHeight|number|0|||
-|scanBarAnimateTime|number|2500|||
-|scanBarColor|string|#22ff00|||
-|scanBarImage|any|null|||
-|scanBarHeight|number|1.5|||
-|scanBarMargin|number|6|||
-|hintText|string|将二维码/条码放入框内，</br>即可自动扫描|-|-|
-|hintTextStyle|object|{ color: '#fff', </br>fontSize: 14,</br>backgroundColor:'transparent'}|-|-|
-|hintTextPosition|number|130|-|-|
-|renderTopBarView|func|-|-|-|
-|renderBottomMenuView|func|-|-|-|
-|isShowScanBar|bool|true|-|-|
-|bottomMenuStyle|object|-|-|-|
+|maskColor|string|#0000004D|true|遮罩颜色|
+|borderColor|string|#000000|true|边框颜色|
+|cornerColor|string|#000000|true|转角颜色|
+|borderWidth|number|0|true|边框宽度|
+|cornerBorderWidth|number|4|true|转角宽度|
+|cornerBorderLength|number|20|true|转角长度|
+|rectHeight|number|200|true|扫描狂高度|
+|rectWidth|number|200|true|扫描狂宽度|
+|isCornerOffset|bool|false|true|转角是否偏移|
+|cornerOffsetSize|number|0|true|转角偏移量|
+|bottomMenuHeight|number|0|true|底部操作菜单高度|
+|scanBarAnimateTime|number|2500|true|扫描线移动速度|
+|scanBarColor|string|#22ff00|true|扫描线颜色|
+|scanBarImage|any|null|true|使用图片扫描线|
+|scanBarHeight|number|1.5|true|扫描线高度|
+|scanBarMargin|number|6|true|扫描线距扫描狂边距|
+|hintText|string|将二维码/条码放入框内，</br>即可自动扫描|true|提示文本|
+|hintTextStyle|object|{ color: '#fff', </br>fontSize: 14,</br>backgroundColor:'transparent'}|true|提示文字样式|
+|hintTextPosition|number|130|true|提示文字位置|
+|isShowScanBar|bool|true|true|是否显示扫描条|
+|bottomMenuStyle|object|-|true|底部菜单样式|
+|renderTopBarView|func|-|flase|绘制顶部操作条组件|
+|renderBottomMenuView|func|-|false|绘制底部操作条组件|
+|onScanResultReceived|func|-|false|扫描结果回调|
 
 
 ## 7.待办
 
-- [ ] 生成二维码功能
-- [ ] 解决重复扫码的问题
-- [ ] 优化属性设置方式
+- [ ] 生成二维码
 - [ ] 控制手电筒
 
 ## 8.感谢
