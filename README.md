@@ -1,7 +1,7 @@
 ## 1.Guide
 
-- [**中文版**](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/README_CN.md)
-- [**English Version**](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/README.md)
+- [**中文版**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README_CN.md)
+- [**English Version**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README.md)
 
 ## 2.Features
 
