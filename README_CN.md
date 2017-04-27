@@ -74,7 +74,7 @@ export default class DefaultScreen extends Component {
 
 ## 6.属性列表
 
-|Prop|类型|默认值|可选|描述|
+|属性名|类型|默认值|可选|描述|
 |:--:|:--:|:--:|:--:|:--:|
 |maskColor|string|#0000004D|true|遮罩颜色|
 |borderColor|string|#000000|true|边框颜色|
