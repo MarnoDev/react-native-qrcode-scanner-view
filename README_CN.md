@@ -1,7 +1,7 @@
 ## 1.使用指南
 
-- [**中文版**](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/README_CN.md)
-- [**English Version**](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/README.md)
+- [**中文版**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README_CN.md)
+- [**English Version**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README.md)
 
 ## 2.特性
 - 支持扫描二维码、条形码
@@ -15,7 +15,7 @@
 |:--:|:--:|:--:|
 |![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/twitter.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ofo.png)|
 |**QQBrowser**|**Gif1**|**Gif2**|
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/qqbrowser.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo1.gif)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo2.gif)||
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/qqbrowser.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo1.gif)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo2.gif)|
 
 
 ## 4.安装

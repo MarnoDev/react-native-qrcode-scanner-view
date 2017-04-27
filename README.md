@@ -14,9 +14,9 @@
 
 |Twitter|WeChat|OFO|
 |:--:|:--:|:--:|
-|![](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/screenshots/twitter.png)|![](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/screenshots/wechat.png)|![](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/screenshots/ofo.png)|
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/twitter.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ofo.png)|
 |**QQBrowser**|**Gif1**|**Gif2**|
-|![](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/screenshots/qqbrowser.png)|![](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/screenshots/demo1.gif)|![](https://github.com/MarnoDev/AC-QRCodeScanner-RN/blob/master/screenshots/demo2.gif)||
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/qqbrowser.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo1.gif)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo2.gif)|
 
 
 ## 4.Installation
