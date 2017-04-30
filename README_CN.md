@@ -74,6 +74,8 @@ export default class DefaultScreen extends Component {
 
 ## 6.属性列表
 
+![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
+
 |属性名|类型|默认值|可选|描述|
 |:--:|:--:|:--:|:--:|:--:|
 |maskColor|string|#0000004D|true|遮罩颜色|
@@ -100,8 +102,6 @@ export default class DefaultScreen extends Component {
 |renderTopBarView|func|-|flase|绘制顶部操作条组件|
 |renderBottomMenuView|func|-|false|绘制底部操作条组件|
 |onScanResultReceived|func|-|false|扫描结果回调|
-
-![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
 
 
 ## 7.待办

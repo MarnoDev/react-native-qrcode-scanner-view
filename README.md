@@ -69,6 +69,8 @@ export default class DefaultScreen extends Component {
 ```
 ## 6.Props
 
+![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
+
 |Prop|Type|Default|Optional|
 |:--:|:--:|:--:|:--:|
 |maskColor|string|#0000004D|true|
@@ -95,8 +97,6 @@ export default class DefaultScreen extends Component {
 |renderTopBarView|func|-|flase|
 |renderBottomMenuView|func|-|false|
 |onScanResultReceived|func|-|false|
-
-![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
 
 ## 7.To Do
 
