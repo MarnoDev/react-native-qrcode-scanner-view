@@ -101,6 +101,8 @@ export default class DefaultScreen extends Component {
 |renderBottomMenuView|func|-|false|绘制底部操作条组件|
 |onScanResultReceived|func|-|false|扫描结果回调|
 
+![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
+
 
 ## 7.待办
 

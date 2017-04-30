@@ -96,6 +96,7 @@ export default class DefaultScreen extends Component {
 |renderBottomMenuView|func|-|false|
 |onScanResultReceived|func|-|false|
 
+![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
 
 ## 7.To Do
 
