@@ -102,6 +102,7 @@ export default class DefaultScreen extends Component {
 |renderTopBarView|func|-|flase|绘制顶部操作条组件|
 |renderBottomMenuView|func|-|false|绘制底部操作条组件|
 |onScanResultReceived|func|-|false|扫描结果回调|
+|torchMode|string|null|true|手电筒的模式，可选"on"或者"off"
 
 
 ## 7.待办

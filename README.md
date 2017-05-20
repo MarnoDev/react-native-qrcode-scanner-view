@@ -71,8 +71,8 @@ export default class DefaultScreen extends Component {
 
 ![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
 
-|Prop|Type|Default|Optional|
-|:--:|:--:|:--:|:--:|
+|Prop|Type|Default|Optional|Description|
+|:--:|:--:|:--:|:--:|:--:|
 |maskColor|string|#0000004D|true|
 |borderColor|string|#000000|true|
 |cornerColor|string|#000000|true|
@@ -97,6 +97,7 @@ export default class DefaultScreen extends Component {
 |renderTopBarView|func|-|flase|
 |renderBottomMenuView|func|-|false|
 |onScanResultReceived|func|-|false|
+|torchMode|string|null|true| Indicate the torch mode, "on" or "off"
 
 ## 7.To Do
 
