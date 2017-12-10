@@ -8,18 +8,18 @@ import {StyleSheet, Text, View} from 'react-native';
 
 import {Images} from '../resource/'
 import ImageButton from "./ImageButton";
-
+import PropTypes from 'prop-types';
 
 export default class TitleBar extends Component {
 
     static propTypes = {
-        leftIcon: React.PropTypes.number,
-        rightIcon: React.PropTypes.number,
-        rightTitle: React.PropTypes.string,
-        leftIconPress: React.PropTypes.func,
-        rightIconPress: React.PropTypes.func,
-        bgColor:React.PropTypes.string,
-        titleColor:React.PropTypes.string,
+        leftIcon: PropTypes.number,
+        rightIcon: PropTypes.number,
+        rightTitle: PropTypes.string,
+        leftIconPress: PropTypes.func,
+        rightIconPress: PropTypes.func,
+        bgColor:PropTypes.string,
+        titleColor:PropTypes.string,
     };
 
     static defaultProps = {

@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "ac-qrcode": "^1.0.0",
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.43.4",
+    "prop-types": "15.6.0",
+    "react": "^16.2.0",
+    "react-native": "^0.51.0",
     "react-native-simple-toast": "0.0.5",
     "react-navigation": "^1.0.0-beta.7"
   },
