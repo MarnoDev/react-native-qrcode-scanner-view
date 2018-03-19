@@ -1,6 +1,6 @@
 {
   "name": "ac-qrcode",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A Highly customizable QRCode Scanner component for React Native",
   "main": "index.js",
   "readmeFilename": "README.md",
