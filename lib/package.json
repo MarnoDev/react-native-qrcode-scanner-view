@@ -12,7 +12,8 @@
     "url": "git+https://MarnoDev@github.com/MarnoDev/AC-QRCode-RN.git"
   },
   "dependencies": {
-    "react-native-camera": "^0.7.0"
+    "prop-types": "^15.6.1",
+    "react-native-camera": "^0.12.0"
   },
   "keywords": [
     "react-native",
