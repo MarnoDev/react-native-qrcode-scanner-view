@@ -97,11 +97,11 @@ export default class DefaultScreen extends Component {
 |renderTopBarView|func|-|flase|
 |renderBottomMenuView|func|-|false|
 |onScanResultReceived|func|-|false|
+|torchOn|bool|false|true|
 
 ## 7.To Do
 
 - [ ] Generate qr code
-- [ ] Control flashlight
 
 ## 8.Thanks
 
