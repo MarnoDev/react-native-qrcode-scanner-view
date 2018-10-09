@@ -102,12 +102,12 @@ export default class DefaultScreen extends Component {
 |renderTopBarView|func|-|flase|绘制顶部操作条组件|
 |renderBottomMenuView|func|-|false|绘制底部操作条组件|
 |onScanResultReceived|func|-|false|扫描结果回调|
+|torchOn|bool|false|true|手电筒是否开启|
 
 
 ## 7.待办
 
 - [ ] 生成二维码
-- [ ] 控制手电筒
 
 ## 8.感谢
 
