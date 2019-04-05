@@ -1,0 +1,58 @@
+{
+  "_from": "git+http://nongqibang.com:8888/app/QRCode.git",
+  "_id": "ac-qrcode@1.1.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/ac-qrcode",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "ac-qrcode@git+http://nongqibang.com:8888/app/QRCode.git",
+    "name": "ac-qrcode",
+    "escapedName": "ac-qrcode",
+    "rawSpec": "git+http://nongqibang.com:8888/app/QRCode.git",
+    "saveSpec": "git+http://nongqibang.com:8888/app/QRCode.git",
+    "fetchSpec": "http://nongqibang.com:8888/app/QRCode.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+http://nongqibang.com:8888/app/QRCode.git#4afb0387441afad75c0185df1cf30e9c8175e7f0",
+  "_spec": "ac-qrcode@git+http://nongqibang.com:8888/app/QRCode.git",
+  "_where": "/Users/mac/Desktop/ztesa-farm-app",
+  "author": {
+    "name": "Marno"
+  },
+  "bugs": {
+    "url": "https://github.com/MarnoDev/AC-QRCode-RN/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-native-camera": "^1.1.4"
+  },
+  "deprecated": false,
+  "description": "A Highly customizable QRCode Scanner component for React Native",
+  "homepage": "https://github.com/MarnoDev/AC-QRCode-RN#readme",
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "reat-native-app",
+    "android",
+    "ios",
+    "react",
+    "marno"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "ac-qrcode",
+  "repository": {
+    "type": "git",
+    "url": "git+https://MarnoDev@github.com/MarnoDev/AC-QRCode-RN.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "version": "1.1.0"
+}
