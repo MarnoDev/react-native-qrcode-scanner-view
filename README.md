@@ -1,3 +1,5 @@
+# DEPRECATED, PERFER TO USE [react-native-qrcode-scanner-view](https://github.com/MarnoDev/react-native-qrcode-scanner-view)
+
 ## 1.Guide
 
 - [**中文版**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README_CN.md)
