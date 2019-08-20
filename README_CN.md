@@ -1,3 +1,7 @@
+### 不再维护, 推荐使用 [react-native-qrcode-scanner-view](https://github.com/MarnoDev/react-native-qrcode-scanner-view)
+-----
+
+
 ## 1.使用指南
 
 - [**中文版**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README_CN.md)
