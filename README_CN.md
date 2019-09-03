@@ -1,8 +1,5 @@
 # react-native-qrcode-scanner-view
 
-[![Version][version-badge]][package]
-[![MIT License][license-badge]][license]
-
 可定制的二维码及条码扫码界面。该库的扫码功能依赖于 **[react-native-camera](https://github.com/react-native-community/react-native-camera)** 。所以理论上来说，如果 react-native-camera 没有提供的功能，这个库也提供不了。所以在开始使用该库之前，建议先按照 react-native-camera 使用说明将其配置好。
 
 你也可以选择不使用本库提供的扫码功能(`QRScannerView`)，只使用扫码界面(`QRScannerRectView`)，具体使用方法，可以查看源码中导出的两个组件。
