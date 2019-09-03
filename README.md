@@ -97,8 +97,6 @@ export default class DefaultScreen extends Component {
 
 ## About
 
-- 公众号：aMarno
-- 网站：[www.marno.cn](http://www.marno.cn)
-- 掘金：[www.juejin.im/user/marno](https://juejin.im/user/56c1c513c24aa800534e85f3)
-- 简书：[www.jianshu.com/u/marno](http://www.jianshu.com/u/174a09ba6c25)
-- 专题：[《React Native 开发阵营》](http://www.jianshu.com/c/b4ce1d706d1f)
+- **公众号:** Marno
+- **网站:** [www.marno.cn](http://www.marno.cn)
+- **掘金:** [www.juejin.im/user/marno](https://juejin.im/user/56c1c513c24aa800534e85f3)
