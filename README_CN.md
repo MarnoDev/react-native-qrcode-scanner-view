@@ -23,9 +23,9 @@
 
 | **Default**  | **WeChat** |  **MeiTuan**  |
 | :----------: | :--------: | :-----------: |
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/default.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/meituan.jpg)|
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/default.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/meituan.png)|
 | **TikTok**  | **DemoHome** | **Demo Gif** |
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/tiktok.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/video.gif)|
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/tiktok.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/video.gif)|
 
 ## 安装
 
