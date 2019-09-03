@@ -3,7 +3,7 @@
 [![Version][version-badge]][package]
 [![MIT License][license-badge]][license]
 
-
+A highly customized qrcode viewfinder base on **[react-native-camera](https://github.com/react-native-community/react-native-camera)**. You must set up react-native-camera correctly first before use it.If you need to set more react-native-camera props, you can just use Viewfinder which is exported as QRScannerRectView. Please view source code to learn more.
 
 ----
 
@@ -25,10 +25,8 @@
 | **Default**  | **WeChat** |  **MeiTuan**  |
 | :----------: | :--------: | :-----------: |
 |![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/default.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/meituan.jpg)|
-| **Twitter**  | **TikTok** | **Demo Home** |
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/twitter.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/tiktok.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demp.jpg)|
-| **Demo Gif** |            |               |
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/video.gif)|            |               |
+| **TikTok**  | **DemoHome** | **Demo Gif** |
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/tiktok.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/video.gif)|
 
 ## 4.Installation
 
