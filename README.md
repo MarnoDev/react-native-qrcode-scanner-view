@@ -17,7 +17,7 @@ A highly customized qrcode viewfinder base on **[react-native-camera](https://gi
 - Support scan QR code, Bar code
 - Scanning interface can be customized
 
-## 3.ScreenShots
+## ScreenShots
 
 | **Default**  | **WeChat** |  **MeiTuan**  |
 | :----------: | :--------: | :-----------: |
@@ -25,7 +25,7 @@ A highly customized qrcode viewfinder base on **[react-native-camera](https://gi
 | **TikTok**  | **DemoHome** | **Demo Gif** |
 |![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/tiktok.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/video.gif)|
 
-## 4.Installation
+## Installation
 
 ```JavaSCript
 // First
@@ -39,7 +39,7 @@ yarn add react-native-qrcode-scanner-view
 npm install react-native-qrcode-scanner-view --save
 ```
 
-## 5.Basic
+## Basic
 
 ```JavaScript
 import { View } from 'react-native';
