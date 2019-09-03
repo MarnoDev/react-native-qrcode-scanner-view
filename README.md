@@ -1,118 +1,103 @@
-### DEPRECATED, PERFER TO USE [react-native-qrcode-scanner-view](https://github.com/MarnoDev/react-native-qrcode-scanner-view)
------
+# react-native-qrcode-scanner-view
 
-## 1.Guide
+[![Version][version-badge]][package]
+[![MIT License][license-badge]][license]
+
+
+
+----
+
+## Guide
 
 - [**中文版**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README_CN.md)
 - [**English Version**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README.md)
 
-## 2.Features
+## Features
 
-- Can scan QR code,Bar code
+- Pure JS code
 - Support Android and iOS
-- Base on react-native-camera
+- Support React Native 0.60+
+- Support scan QR code, Bar code
 - Scanning interface can be customized
 
 ## 3.ScreenShots
 
-|Twitter|WeChat|OFO|
-|:--:|:--:|:--:|
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/twitter.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ofo.png)|
-|**QQBrowser**|**Gif1**|**Gif2**|
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/qqbrowser.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo1.gif)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo2.gif)|
-
+| **Default**  | **WeChat** |  **MeiTuan**  |
+| :----------: | :--------: | :-----------: |
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/default.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/meituan.jpg)|
+| **Twitter**  | **TikTok** | **Demo Home** |
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/twitter.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/tiktok.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demp.jpg)|
+| **Demo Gif** |            |               |
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/video.gif)|            |               |
 
 ## 4.Installation
-```
-// first step
-npm install ac-qrcode --save
 
-// second step
-react-native link
+```JavaSCript
+// First
+set up react-native-camera
+
+// Second
+yarn add react-native-qrcode-scanner-view
+
+// or
+
+npm install react-native-qrcode-scanner-view --save
 ```
-## 5.Basic Usage
-```
-import { QRScannerView } from 'ac-qrcode';
+
+## 5.Basic
+
+```JavaScript
+import { View } from 'react-native';
+import QRScannerView from 'react-native-qrcode-sanner-view';
 
 export default class DefaultScreen extends Component {
+
+    renderTitleBar = () => <Text style={{color:'white',textAlign:'center',padding:16}}>Title</Text>
+
+    renderMenu = () => <Text style={{color:'white',textAlign:'center',padding:16}}>Menu</Text>
+
+    barcodeReceived = (event) => { console.log('Type: ' + event.type + '\nData: ' + event.data) };
+
     render() {
         return (
-
+           <View style={{flex:1}}>
             < QRScannerView
-                onScanResultReceived={this.barcodeReceived.bind(this)}
-
-                renderTopBarView={() => this._renderTitleBar()}
-
-                renderBottomMenuView={() => this._renderMenu()}
-            />
+                onScanResult={ this.barcodeReceived }
+                renderHeaderView={ this.renderTitleBar }
+                renderFooterView={ this.renderMenu }
+                scanBarAnimateReverse={ true }/>
+           </View>
         )
-    }
-
-    _renderTitleBar(){
-        return(
-            <Text
-                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
-            >Here is title bar</Text>
-        );
-    }
-
-    _renderMenu() {
-        return (
-            <Text
-                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
-            >Here is bottom menu</Text>
-        )
-    }
-
-    barcodeReceived(e) {
-        Toast.show('Type: ' + e.type + '\nData: ' + e.data);
-        //console.log(e)
     }
 }
 ```
-## 6.Props
 
-![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
+## Props
+
+![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/props.png)
 
 |Prop|Type|Default|Optional|
-|:--:|:--:|:--:|:--:|
-|maskColor|string|#0000004D|true|
-|borderColor|string|#000000|true|
-|cornerColor|string|#000000|true|
-|borderWidth|number|0|true|
-|cornerBorderWidth|number|4|true|
-|cornerBorderLength|number|20|true|
-|rectHeight|number|200|true|
-|rectWidth|number|200|true|
-|isCornerOffset|bool|false|true|
-|cornerOffsetSize|number|0|true|
-|bottomMenuHeight|number|0|true|
-|scanBarAnimateTime|number|2500|true|
-|scanBarColor|string|#22ff00|true|
-|scanBarImage|any|null|true|
-|scanBarHeight|number|1.5|true|
-|scanBarMargin|number|6|true|
-|hintText|string|将二维码/条码放入框内，</br>即可自动扫描|true|
-|hintTextStyle|object|{ color: '#fff', </br>fontSize: 14,</br>backgroundColor:'transparent'}|true|
-|hintTextPosition|number|130|true|
-|isShowScanBar|bool|true|true|
-|bottomMenuStyle|object|-|true|
-|renderTopBarView|func|-|flase|
-|renderBottomMenuView|func|-|false|
-|onScanResultReceived|func|-|false|
+| :-------------------: | :----: | :----------------------------------------------------------------------------------------------: | :---: |
+|       maskColor       | string |                                            #0000004D                                             | true  |
+|       rectStyle       | object | height: 300, <br>width: 300, <br>borderWidth: 0, <br>borderColor: '#000000', <br>marginBottom: 0 | true  |
+|      cornerStyle      | object |            height: 32, <br>width: 32, <br>borderWidth: 6, <br>borderColor: '#1A6DD5'             | true  |
+|   cornerOffsetSize    | number |                                                0                                                 | true  |
+|     isShowCorner      |  bool  |                                               true                                               | true  |
+|     scanBarStyle      | object |             marginHorizontal: 8, <br>borderRadius: 2, <br>backgroundColor: '#1A6DD5'             | true  |
+|     isShowScanBar     |  bool  |                                               true                                               | true  |
+|  scanBarAnimateTime   | number |                                               3000                                               | true  |
+| scanBarAnimateReverse |  bool  |                                              false                                               | true  |
+|     scanBarImage      |  any   |                                                                                                  | true  |
+|       hintText        | string |                                                                                                  | true  |
+|     hintTextStyle     | object |      color: '#fff', <br>fontSize: 14, <br>backgroundColor: 'transparent', <br>marginTop: 32      | true  |
+|   renderHeaderView    |  func  |                                                -                                                 | true  |
+|   renderFooterView    |  func  |                                                -                                                 | true  |
+|     onScanResult      |  func  |                                                -                                                 | false |
+|     scanInterval      | number |                                               2000                                               | true  |
+|        torchOn        |  bool  |                                              false                                               | true  |
+|       userFront       |  bool  |                                              false                                               | true  |
 
-## 7.To Do
-
-- [ ] Generate qr code
-- [ ] Control flashlight
-
-## 8.Thanks
-
-- [react-native-camera](https://github.com/lwansbrough/react-native-camera)
-- [react-native-qrcode](https://github.com/cssivision/react-native-qrcode)
-- [react-native-qrcode-app](https://github.com/insiderdev/react-native-qrcode-app)
-
-## 9.About Me
+## About
 
 - 公众号：aMarno
 - 网站：[www.marno.cn](http://www.marno.cn)

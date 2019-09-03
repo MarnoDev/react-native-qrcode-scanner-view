@@ -1,128 +1,106 @@
-### 不再维护, 推荐使用 [react-native-qrcode-scanner-view](https://github.com/MarnoDev/react-native-qrcode-scanner-view)
+# react-native-qrcode-scanner-view
+
+[![Version][version-badge]][package]
+[![MIT License][license-badge]][license]
+
+可定制的二维码及条码扫码界面。该库的扫码功能依赖于 **[react-native-camera](https://github.com/react-native-community/react-native-camera)** 。所以理论上来说，如果 react-native-camera 没有提供的功能，这个库也提供不了。所以在开始使用该库之前，建议先按照 react-native-camera 使用说明将其配置好。
+
+你也可以选择不使用本库提供的扫码功能(`QRScannerView`)，只使用扫码界面(`QRScannerRectView`)，具体使用方法，可以查看源码中导出的两个组件。
+
 -----
 
+## 指南
 
-## 1.使用指南
-
-- [**中文版**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README_CN.md)
+- [**中文说明**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README_CN.md)
 - [**English Version**](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/README.md)
 
-## 2.特性
-- 支持扫描二维码、条形码
+## 特性
+
+- 纯 JS 代码
 - 支持 Android 和 iOS 系统
-- 基于 react-native-camera
-- 轻松实现各类扫描界面
+- 支持 React Native 0.60+
+- 支持条码和二维码
+- 高度可定制的扫描界面，快速实现各种效果
 
-## 3.截图预览
+## 截图
 
-|Twitter|WeChat|OFO|
-|:--:|:--:|:--:|
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/twitter.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ofo.png)|
-|**QQBrowser**|**Gif1**|**Gif2**|
-|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/qqbrowser.png)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo1.gif)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demo2.gif)|
+| **Default**  | **WeChat** |  **MeiTuan**  |
+| :----------: | :--------: | :-----------: |
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/default.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/wechat.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/meituan.jpg)|
+| **Twitter**  | **TikTok** | **Demo Home** |
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/twitter.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/tiktok.jpg)|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/demp.jpg)|
+| **Demo Gif** |            |               |
+|![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/video.gif)|            |               |
 
+## 安装
 
-## 4.安装
+```JavaSCript
+// 第一步
+配置好 react-native-camera
 
+// 第二步（安装本库）
+yarn add react-native-qrcode-scanner-view
+
+// 或
+
+npm install react-native-qrcode-scanner-view --save
 ```
-//第一步
-npm install ac-qrcode --save
 
-//第二步（react-native-camera 需要 link 后才能使用）
-react-native link
+## 基本
 
-PS：如果 link 没有成功，会报错。如果没有自动 link，可以手动 link
-```
-
-## 5.基本使用
-
-```
-import { QRScannerView } from 'ac-qrcode';
+```JavaScript
+import { View } from 'react-native';
+import QRScannerView from 'react-native-qrcode-sanner-view';
 
 export default class DefaultScreen extends Component {
+
+    renderTitleBar = () => <Text style={{color:'white',textAlign:'center',padding:16}}>Title</Text>
+
+    renderMenu = () => <Text style={{color:'white',textAlign:'center',padding:16}}>Menu</Text>
+
+    barcodeReceived = (event) => { console.log('Type: ' + event.type + '\nData: ' + event.data) };
+
     render() {
         return (
-
+           <View style={{flex:1}}>
             < QRScannerView
-                onScanResultReceived={this.barcodeReceived.bind(this)}
-
-                renderTopBarView={() => this._renderTitleBar()}
-
-                renderBottomMenuView={() => this._renderMenu()}
-            />
+                onScanResult={ this.barcodeReceived }
+                renderHeaderView={ this.renderTitleBar }
+                renderFooterView={ this.renderMenu }
+                scanBarAnimateReverse={ true }/>
+           </View>
         )
-    }
-
-    _renderTitleBar(){
-        return(
-            <Text
-                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
-            >这里添加标题</Text>
-        );
-    }
-
-    _renderMenu() {
-        return (
-            <Text
-                style={{color:'white',textAlignVertical:'center', textAlign:'center',font:20,padding:12}}
-            >这里添加底部菜单</Text>
-        )
-    }
-
-    barcodeReceived(e) {
-        Toast.show('Type: ' + e.type + '\nData: ' + e.data);
-        //console.log(e)
     }
 }
 ```
 
-## 6.属性列表
+## 属性
 
-![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/ac-qrcode-props.jpg)
+![](https://github.com/MarnoDev/AC-QRCode-RN/blob/master/screenshots/props.png)
 
-|属性名|类型|默认值|可选|描述|
-|:--:|:--:|:--:|:--:|:--:|
-|maskColor|string|#0000004D|true|遮罩颜色|
-|borderColor|string|#000000|true|边框颜色|
-|cornerColor|string|#000000|true|转角颜色|
-|borderWidth|number|0|true|边框宽度|
-|cornerBorderWidth|number|4|true|转角宽度|
-|cornerBorderLength|number|20|true|转角长度|
-|rectHeight|number|200|true|扫描狂高度|
-|rectWidth|number|200|true|扫描狂宽度|
-|isCornerOffset|bool|false|true|转角是否偏移|
-|cornerOffsetSize|number|0|true|转角偏移量|
-|bottomMenuHeight|number|0|true|底部操作菜单高度|
-|scanBarAnimateTime|number|2500|true|扫描线移动速度|
-|scanBarColor|string|#22ff00|true|扫描线颜色|
-|scanBarImage|any|null|true|使用图片扫描线|
-|scanBarHeight|number|1.5|true|扫描线高度|
-|scanBarMargin|number|6|true|扫描线距扫描狂边距|
-|hintText|string|将二维码/条码放入框内，</br>即可自动扫描|true|提示文本|
-|hintTextStyle|object|{ color: '#fff', </br>fontSize: 14,</br>backgroundColor:'transparent'}|true|提示文字样式|
-|hintTextPosition|number|130|true|提示文字位置|
-|isShowScanBar|bool|true|true|是否显示扫描条|
-|bottomMenuStyle|object|-|true|底部菜单样式|
-|renderTopBarView|func|-|flase|绘制顶部操作条组件|
-|renderBottomMenuView|func|-|false|绘制底部操作条组件|
-|onScanResultReceived|func|-|false|扫描结果回调|
+|        属性名         |  类型  |                                              默认值                                              | 可选  |        描述        |
+| :-------------------: | :----: | :----------------------------------------------------------------------------------------------: | :---: | :----------------: |
+|       maskColor       | string |                                            #0000004D                                             | true  |      遮罩颜色      |
+|       rectStyle       | object | height: 300, <br>width: 300, <br>borderWidth: 0, <br>borderColor: '#000000', <br>marginBottom: 0 | true  |     扫描框样式     |
+|      cornerStyle      | object |            height: 32, <br>width: 32, <br>borderWidth: 6, <br>borderColor: '#1A6DD5'             | true  |      转角样式      |
+|   cornerOffsetSize    | number |                                                0                                                 | true  |     转角偏移量     |
+|     isShowCorner      |  bool  |                                               true                                               | true  |    转角是否显示    |
+|     scanBarStyle      | object |             marginHorizontal: 8, <br>borderRadius: 2, <br>backgroundColor: '#1A6DD5'             | true  |     扫描线样式     |
+|     isShowScanBar     |  bool  |                                               true                                               | true  |   是否显示扫描条   |
+|  scanBarAnimateTime   | number |                                               3000                                               | true  |   扫描线动画时长   |
+| scanBarAnimateReverse |  bool  |                                              false                                               | true  |   扫描线动画反向   |
+|     scanBarImage      |  any   |                                                                                                  | true  |   使用图片扫描线   |
+|       hintText        | string |                                                                                                  | true  |      提示文本      |
+|     hintTextStyle     | object |      color: '#fff', <br>fontSize: 14, <br>backgroundColor: 'transparent', <br>marginTop: 32      | true  |    提示文字样式    |
+|   renderHeaderView    |  func  |                                                -                                                 | true  | 绘制顶部操作条组件 |
+|   renderFooterView    |  func  |                                                -                                                 | true  | 绘制底部操作条组件 |
+|     onScanResult      |  func  |                                                -                                                 | false |    扫描结果回调    |
+|     scanInterval      | number |                                               2000                                               | true  |  扫描结果回调间隔  |
+|        torchOn        |  bool  |                                              false                                               | true  |   是否开启闪光灯   |
+|       userFront       |  bool  |                                              false                                               | true  | 是否使用前置摄像头 |
 
+## 关于
 
-## 7.待办
-
-- [ ] 生成二维码
-- [ ] 控制手电筒
-
-## 8.感谢
-
-- [react-native-camera](https://github.com/lwansbrough/react-native-camera)
-- [react-native-qrcode-app](https://github.com/insiderdev/react-native-qrcode-app)
-- [react-native-qrcode](https://github.com/cssivision/react-native-qrcode)
-
-## 9.关于我
-
-- 公众号：aMarno
-- 网站：[www.marno.cn](http://www.marno.cn)
-- 掘金：[www.juejin.im/user/marno](https://juejin.im/user/56c1c513c24aa800534e85f3)
-- 简书：[www.jianshu.com/u/marno](http://www.jianshu.com/u/174a09ba6c25)
-- 专题：[《React Native 开发阵营》](http://www.jianshu.com/c/b4ce1d706d1f)
+- **公众号:** Marno
+- **网站:** [www.marno.cn](http://www.marno.cn)
+- **掘金:** [www.juejin.im/user/marno](https://juejin.im/user/56c1c513c24aa800534e85f3)
