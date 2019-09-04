@@ -1,6 +1,6 @@
 {
   "name": "react-native-qrcode-scanner-view",
-  "version": "2.0.0",
+  "version": "1.9.0",
   "description": "A Highly customizable QRCode Scanner component for React Native",
   "main": "index.js",
   "readmeFilename": "README.md",
@@ -9,25 +9,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://MarnoDev@github.com/MarnoDev/AC-QRCode-RN.git"
+    "url": "git+https://github.com/MarnoDev/react-native-qrcode-scanner-view.git"
   },
   "dependencies": {
-    "prop-types": "^15.6.1",
-    "react-native-camera": "^0.12.0"
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react-native-camera": "^3.3.0"
   },
   "keywords": [
     "react-native",
     "react-native-component",
-    "reat-native-app",
+    "qrcode",
+    "barcode",
+    "qrcode-scanner",
+    "qrcode-viewfinder",
     "android",
     "ios",
-    "react",
     "marno"
   ],
   "author": "Marno",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/MarnoDev/AC-QRCode-RN/issues"
+    "url": "https://github.com/MarnoDev/react-native-qrcode-scanner-view/issues"
   },
-  "homepage": "https://github.com/MarnoDev/AC-QRCode-RN#readme"
+  "homepage": "https://github.com/MarnoDev/react-native-qrcode-scanner-view#readme"
 }
