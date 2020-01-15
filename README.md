@@ -43,7 +43,7 @@ npm install react-native-qrcode-scanner-view --save
 
 ```JavaScript
 import { View } from 'react-native';
-import { QRScannerView } from 'react-native-qrcode-sanner-view';
+import { QRScannerView } from 'react-native-qrcode-scanner-view';
 
 export default class DefaultScreen extends Component {
 
